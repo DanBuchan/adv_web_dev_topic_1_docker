@@ -77,6 +77,7 @@ COPY ./download/public/index.js ./public/
 COPY ./download/public/desktop.jpg ./public/
 
 RUN echo 'export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3' >> ~/.bashrc
+RUN echo 'export export WORKON_HOME=/home/coder/project/envs' >> ~/.bashrc
 
 WORKDIR /home/coder/project
 
