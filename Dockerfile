@@ -76,6 +76,9 @@ COPY ./download/public/theme.css ./public/
 COPY ./download/public/index.js ./public/
 COPY ./download/public/desktop.jpg ./public/
 
+RUN echo 'export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3' >> ~/.bashrc
+RUN source /usr/local/bin/virtualenvwrapper.sh
+
 WORKDIR /home/coder/project
 
 #### SET UP NGINX
