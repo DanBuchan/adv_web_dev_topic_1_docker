@@ -1,0 +1,9 @@
+{
+  "name": "uol-coursera_master",
+  "httpPort": 8000,
+  "mounts": [
+    {
+      "path": "/home/awduser/work"
+    }
+  ]
+}
