@@ -77,6 +77,16 @@ COPY ./download/public/index.js ./public/
 COPY ./download/public/desktop.jpg ./public/
 
 WORKDIR /home/coder/project
+mkdir /home/coder/project/topic1
+mkdir /home/coder/project/topic2
+mkdir /home/coder/project/topic3
+mkdir /home/coder/project/topic4
+mkdir /home/coder/project/topic5
+mkdir /home/coder/project/topic6
+mkdir /home/coder/project/topic7
+mkdir /home/coder/project/topic8
+mkdir /home/coder/project/topic9
+mkdir /home/coder/project/topic10
 
 #### SET UP NGINX
 

@@ -1,9 +1,9 @@
 {
-  "name": "uol-coursera_master",
+  "name": "awd_topic1",
   "httpPort": 8000,
   "mounts": [
     {
-      "path": "/home/awduser/work"
+      "path": "/home/coder/project"
     }
   ]
 }
