@@ -10,6 +10,12 @@
         "**/.settings": true,
         "**/.factorypath": true
     },
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/*/**": true,
+        "**/envs/**": true
+    },
     "workbench.startupEditor": "none",
     "actionButtons": {
       "defaultColor": "#ff0034", // Can also use string color names.

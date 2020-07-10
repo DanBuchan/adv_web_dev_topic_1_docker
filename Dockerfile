@@ -49,7 +49,6 @@ USER coder
 # Setup User Visual Studio Code Extentions
 ENV VSCODE_USER "/home/coder/.local/share/code-server/User"
 ENV VSCODE_EXTENSIONS "/home/coder/.local/share/code-server/extensions"
-COPY ./download/public/settings.json /root/.local/share/code-server/User/
 
 RUN mkdir -p ${VSCODE_USER}
 
