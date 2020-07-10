@@ -49,6 +49,7 @@ USER coder
 # Setup User Visual Studio Code Extentions
 ENV VSCODE_USER "/home/coder/.local/share/code-server/User"
 ENV VSCODE_EXTENSIONS "/home/coder/.local/share/code-server/extensions"
+COPY ./download/public/settings.json /root/.local/share/code-server/User/
 
 RUN mkdir -p ${VSCODE_USER}
 
@@ -78,7 +79,6 @@ COPY ./download/public/desktop.jpg ./public/
 
 RUN echo 'export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3' >> ~/.bashrc
 RUN echo 'export WORKON_HOME=/home/coder/project/envs' >> ~/.bashrc
-RUN echo 'fs.inotify.max_user_watches=200000' >> /etc/sysctl.conf
 
 WORKDIR /home/coder/project
 
