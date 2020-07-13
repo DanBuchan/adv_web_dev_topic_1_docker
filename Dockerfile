@@ -79,7 +79,7 @@ COPY ./download/public/desktop.jpg ./public/
 
 RUN echo 'export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3' >> ~/.bashrc
 RUN echo 'export WORKON_HOME=/home/coder/project/envs' >> ~/.bashrc
-run echo 'source /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
+run echo 'source /usr/local/bin/virtualenvwrapper.sh 2> /dev/null' >> ~/.bashrc
 
 WORKDIR /home/coder/project
 
