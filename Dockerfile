@@ -77,9 +77,14 @@ COPY ./download/public/theme.css ./public/
 COPY ./download/public/index.js ./public/
 COPY ./download/public/desktop.jpg ./public/
 
+RUN pip3 install virtualenvwrapper
+ENV VIRTUALENVWRAPPER_PYTHON /usr/bin/python3
+RUN /bin/bash -c "source /usr/local/bin/virtualenvwrapper.sh;  mkvirtualenv -p /usr/bin/python3 advanced_web_dev"
+RUN /bin/bash -c "source /usr/local/bin/virtualenvwrapper.sh;  workon advanced_web_dev; pip install django==3.0.3"
+
 RUN echo 'export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3' >> ~/.bashrc
-RUN echo 'export WORKON_HOME=/home/coder/project/envs' >> ~/.bashrc
-run echo 'source /usr/local/bin/virtualenvwrapper.sh 2> /dev/null' >> ~/.bashrc
+# RUN echo 'export WORKON_HOME=/home/coder/project/envs' >> ~/.bashrc
+RUN echo 'source /usr/local/bin/virtualenvwrapper.sh 2> /dev/null' >> ~/.bashrc
 
 WORKDIR /home/coder/project
 
